@@ -79,15 +79,8 @@ export default function Index() {
                   <Grid item>
                     <img
                       alt='esqueca.me'
-                      src='/logo.png'
-                      style={{ height: "6vh", paddingRight: '1vw' }}
-                    />
-                  </Grid>
-                  <Grid item>
-                    <img
-                      alt='esqueca.me'
                       src='/esqueca-me.png'
-                      style={{ height: "6vh", paddingLeft: '1vw' }}
+                      style={{ height: "6vh" }}
                     />
                   </Grid>
                 </Grid>
