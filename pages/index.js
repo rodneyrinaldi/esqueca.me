@@ -99,11 +99,11 @@ export default function Index() {
 
                 <Typography variant="h4" component="h1" gutterBottom
                   style={{ display: 'flex', textAlign: 'center' }}>
-                  cancelamento de recebimentos indevidos e mensagens não autorizadas
+                  recebimentos indevidos e mensagens não autorizadas
                 </Typography>
 
                 <Button variant="contained" color="primary" component={Link} naked href="/about"
-                  style={{ display: 'flex', justifyContent: 'center', marginTop: '2vh', fontSize: '30px' }}>
+                  style={{ display: 'flex', justifyContent: 'center', marginTop: '2vh', fontSize: '28px' }}>
                   MAIS INFORMAÇÕES
                 </Button>
 
