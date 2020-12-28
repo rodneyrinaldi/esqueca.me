@@ -4,16 +4,11 @@ import Image from 'next/image';
 import Container from '@material-ui/core/Container';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { makeStyles } from '@material-ui/core/styles';
-
-
-import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Paper from '@material-ui/core/Paper';
-import amber from '@material-ui/core/colors/amber';
-import blueGrey from '@material-ui/core/colors/blueGrey';
+import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
-import ProTip from '../components/ProTip';
 import Link from '../components/Link';
 import Copyright from '../components/Copyright';
 
@@ -86,6 +81,7 @@ export default function Index() {
                 </Grid>
               </Grid>
             </div>
+
             <div className={classes.layer2}>
               <img
                 alt='esqueca.me'
@@ -93,8 +89,26 @@ export default function Index() {
                 style={{ height: "40vh" }}
               />
             </div>
-            <div className={classes.layer3}>
 
+            <div className={classes.layer3}>
+              <Box my={4}>
+                <Typography variant="h4" component="h1" gutterBottom
+                  style={{ display: 'flex', justifyContent: 'center' }}>
+                  cansado de spam?
+                </Typography>
+
+                <Typography
+                  style={{ display: 'flex', textAlign: 'center' }}>
+                  cancelamento de recebimentos indevidos e mensagens não autorizadas
+                </Typography>
+
+                <Button variant="contained" color="primary" component={Link} naked href="/about"
+                  style={{ display: 'flex', justifyContent: 'center', marginTop: '2vh' }}>
+                  MAIS INFORMAÇÕES
+                </Button>
+
+                <Copyright />
+              </Box>
             </div>
           </Grid>
 
@@ -102,83 +116,5 @@ export default function Index() {
       </div>
 
     </ Container>
-  );
-}
-
-
-
-
-
-const colorWhite = blueGrey[50];
-const colorAmber = amber[500];
-const colorDarkGrey = blueGrey[900];
-
-const styles = {
-  paperWrapper: {
-    margin: 0,
-    padding: 0,
-    width: '100vw',
-    height: '100vh',
-    backgroundImage: `url(${"/back-img.svg"})`
-  },
-};
-
-export function IndexOLD() {
-  return (
-    <Paper style={styles.paperWrapper}>
-
-
-      <Container maxWidth="sm">
-        <Grid container direction="column">
-          <Box
-            width="100%" height="4rem"
-            marginTop="3rem" marginBottom="4rem">
-            <Grid item xs={12}>
-              <Grid container direction="row"
-                justify="space-between" alignItems="center" alignContent="center"
-                style={{ padding: "14px 10px" }}>
-                <Grid item>
-                  <Typography component="h1" variant="h5"
-                    style={{ color: colorAmber, fontSize: 40, fontWeight: 900 }}>
-                    esqueca.me
-                </Typography>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Box>
-        </Grid>
-      </Container>
-
-      <Container maxWidth="sm">
-        <Image
-          alt="esqueca.me"
-          src="/anger-face.svg"
-          layout="responsive"
-          width={700}
-          height={475}
-          margin={100}
-        />
-      </Container>
-
-
-
-
-
-
-
-      {/* <Container maxWidth="sm">
-        <Box my={4}>
-          <Typography variant="h4" component="h1" gutterBottom>
-            esqueca.me
-            </Typography>
-          <Link href="/about" color="secondary">
-            Go to the about page
-            </Link>
-          <ProTip />
-          <Copyright />
-        </Box>
-      </Container> */}
-
-    </Paper >
   );
 }
