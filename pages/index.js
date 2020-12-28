@@ -93,17 +93,17 @@ export default function Index() {
             <div className={classes.layer3}>
               <Box my={4}>
                 <Typography variant="h4" component="h1" gutterBottom
-                  style={{ display: 'flex', justifyContent: 'center' }}>
+                  style={{ display: 'flex', justifyContent: 'center', fontSize: '48px' }}>
                   cansado de spam?
                 </Typography>
 
-                <Typography
+                <Typography variant="h4" component="h1" gutterBottom
                   style={{ display: 'flex', textAlign: 'center' }}>
                   cancelamento de recebimentos indevidos e mensagens não autorizadas
                 </Typography>
 
                 <Button variant="contained" color="primary" component={Link} naked href="/about"
-                  style={{ display: 'flex', justifyContent: 'center', marginTop: '2vh' }}>
+                  style={{ display: 'flex', justifyContent: 'center', marginTop: '2vh', fontSize: '30px' }}>
                   MAIS INFORMAÇÕES
                 </Button>
 
