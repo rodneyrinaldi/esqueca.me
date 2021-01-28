@@ -1,4 +1,4 @@
-export default function SignUp() {
+export default function SignIn() {
   return (
     <>
       <h1>em desenvolvimento</h1>
