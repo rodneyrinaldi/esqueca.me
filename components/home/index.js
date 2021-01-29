@@ -32,7 +32,7 @@ export default function Home() {
         <session className={styles.tierTitle}>
           <h1>Cansado de receber spam</h1>
           <p>Recebimento de mensagens não autorizadas</p>
-          <p>Quer sessar o abuso de privacidade</p>
+          <p>Quer cessar o abuso de privacidade</p>
           <Link href="#">
             <a>
               MAIS INFORMAÇÕES
