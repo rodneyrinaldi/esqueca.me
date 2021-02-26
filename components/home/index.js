@@ -33,7 +33,7 @@ export default function Home() {
           <h1>CANSADO DE RECEBER SPAM</h1>
           <p>Recebimento de mensagens não autorizadas</p>
           <p>Quer cessar o abuso de privacidade</p>
-          <Link href="#">
+          <Link href="/">
             <a>
               MAIS INFORMAÇÕES
             </a>

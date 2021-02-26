@@ -1,7 +1,11 @@
 import Head from 'next/head'
+// import { GetServerSideProps } from 'next'
+
 import HomeComp from '../components/home'
 
-export default function Index() {
+export default function Index(props) {
+  console.log('no front', props)
+
   return (
     <>
       <Head>
@@ -13,4 +17,16 @@ export default function Index() {
       <HomeComp />
     </>
   )
+}
+
+export const getServerSideProps = async (ctx) => {
+  const { level } = ctx.req.cookies
+
+  console.log('no back', level)
+
+  return {
+    props: {
+      level
+    }
+  }
 }
