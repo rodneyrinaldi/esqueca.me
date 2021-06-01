@@ -1,9 +1,29 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { useContext } from 'react'
+import socketIOClient from 'socket.io-client';
+
+import { EsquecameContext } from '../../contexts/esquecame'
+import Version from '../version/version'
 
 import styles from './index.module.css'
 
 export default function Home() {
+  const contextData = useContext(EsquecameContext)
+
+  function handleClick() {
+    contextData.levelUp()
+    console.log(contextData)
+  }
+
+  function socketLogin(pLogin, pMessage) {
+    const socket = socketIOClient("https://push01.cloudrobot.com.br:3333/");
+    socket.emit("login", "xxxxx")
+    // socket.on("users", data => {
+    //   console.log(JSON.parse(data))
+    // })
+  }
+
   return (
     <>
       <header>
@@ -30,7 +50,7 @@ export default function Home() {
         </session>
 
         <session className={styles.tierTitle}>
-          <h1>CANSADO DE RECEBER SPAM</h1>
+          <h1>CANSADO DOS SPAMS</h1>
           <p>Recebimento de mensagens não autorizadas</p>
           <p>Quer cessar o abuso de privacidade</p>
           <Link href="/">
@@ -38,6 +58,17 @@ export default function Home() {
               MAIS INFORMAÇÕES
             </a>
           </Link>
+
+          <button id="a" onClick={handleClick}>
+            testar context
+          </button>
+
+          <button id="b" onClick={socketLogin}>
+            testar socket
+          </button>
+
+          <Version />
+
         </session>
       </main>
     </>

@@ -8,7 +8,6 @@ export function EsquecameProvider({ children }) {
 
   function levelUp() {
     setLevel(level + 1)
-    console.log(1)
   }
 
   useEffect(() => {
