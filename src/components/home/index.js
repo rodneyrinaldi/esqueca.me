@@ -59,13 +59,13 @@ export default function Home() {
             </a>
           </Link>
 
-          <button id="a" onClick={handleClick}>
+          {/* <button id="a" onClick={handleClick}>
             testar context
           </button>
 
           <button id="b" onClick={socketLogin}>
             testar socket
-          </button>
+          </button> */}
 
           <Version />
 
